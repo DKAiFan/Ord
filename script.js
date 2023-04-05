@@ -1,6 +1,15 @@
-const menuIcon = document.querySelector('.menu-icon');
-const menu = document.querySelector('.menu');
+const menuButton = document.querySelector('.menu-button');
+const nav = document.querySelector('nav');
+const navLinksMobile = document.querySelectorAll('.nav-links-mobile li');
 
-menuIcon.addEventListener('click', () => {
-  menu.classList.toggle('show');
+menuButton.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  menuButton.classList.toggle('active');
+});
+
+navLinksMobile.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+    menuButton.classList.remove('active');
+  });
 });
