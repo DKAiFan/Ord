@@ -402,10 +402,67 @@ footer p {
 /*============================================================================================================
  MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER - MEMBER -  
  ============================================================================================================*/
-#id {
-  width:80%;
+ .box_signup {
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 20px;
 }
 
+.box_signup p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.box_signup label {
+  display: none;
+}
+
+.box_signup input[type="text"],
+.box_signup input[type="email"],
+.box_signup input[type="motivation"] {
+  display: block;
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box_signup input[type="text"]::placeholder,
+.box_signup input[type="email"]::placeholder,
+.box_signup input[type="motivation"]::placeholder {
+  font-weight: normal;
+  color: #999;
+}
+
+.box_signup input[type="text"]:focus,
+.box_signup input[type="email"]:focus,
+.box_signup input[type="motivation"]:focus {
+  border-color: #007bff;
+}
+
+.box_signup button {
+  display: block;
+  margin: auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.box_signup button:hover {
+  cursor: pointer;
+  background-color: #0062cc;
+}
 /*============================================================================================================
  ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE 
  ============================================================================================================*/
