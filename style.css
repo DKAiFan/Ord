@@ -166,9 +166,10 @@ html {
     padding-bottom: 2rem;
     font-weight: 400;
     color: #763434;
+    text-align: start;
 
   }
- 
+
 
   p {
     font-size: 21px;
@@ -413,7 +414,7 @@ footer p {
     padding: 0.5rem;
 
     display: block;
-    text-align: justify;
+    text-align: start;
     line-height: 2rem;
   }
 
