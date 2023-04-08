@@ -30,11 +30,24 @@ html {
 
       .box_small {
         width:45%;
-
       }
 
       .box_large {
         width:55%;
+      }
+      
+      .box_flex {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+ 
+      }
+
+      .box_block {
+        width: 100%;
+        display: block;
+     
       }
       
       .box_text {
@@ -42,6 +55,7 @@ html {
         line-height: 2rem;
         text-align: justify;
         padding: 2rem;
+        border: 1px solid red;
       }
 
       .box_main {
@@ -76,6 +90,10 @@ html {
         display: block;
         justify-content: center;
         text-align: center;
+        padding: 1rem;
+      }
+
+      .box_padding{
         padding: 1rem;
       }
 
@@ -611,11 +629,5 @@ input[type="text"]::placeholder {
 }
 
 /*Støtte*/
-table {
-  margin-left: 1rem;
-}
 
-table td {
-  padding-right: 1rem;
-}
 }
