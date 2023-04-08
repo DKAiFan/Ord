@@ -48,3 +48,4 @@ function validateForm() {
   alert("Sign up successful!");
   return true;
 }
+

@@ -72,14 +72,14 @@ html {
         background-color: #763434;
         color: white;
         position: absolute; 
-        top: 50%; 
-        left: 25%; 
-        transform: translate(-50%, -50%); 
+        top: 10%; 
+        left: 10%; 
         z-index: 2;
         display: block;
         justify-content: center;
         text-align: center;
         padding: 1rem;
+
       }
 
       .box_signup {
@@ -360,6 +360,122 @@ display: flex;
 }
 
 /*============================================================================================================
+ LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN - LOVEN  
+ ============================================================================================================*/
+ .container_ani {
+  width: 4000px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+.box_story {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-right: 2rem;
+  animation: moveBox 130s linear infinite;
+  top: 0; /* new */
+  right: -3000px; /* new */
+  border-radius: 20px;
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 6rem;
+
+}
+
+.box_story p {
+  margin: 0; /* remove default margin of paragraphs */
+  max-width: 100%; /* ensure the text wraps within the container */
+}
+
+@keyframes moveBox {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-2400%);
+  }
+}
+
+.box_story:nth-of-type(1) {
+  background-image: url(images/men/man1.jpg);
+
+}
+
+.box_story:nth-of-type(2) {
+  background-image: url(images/men/man2.jpg);
+}
+.box_story:nth-of-type(3) {
+  background-image: url(images/men/man3.jpg);
+}
+.box_story:nth-of-type(4) {
+  background-image: url(images/men/man4.jpg);
+}
+.box_story:nth-of-type(5) {
+  background-image: url(images/men/man5.jpg);
+}
+.box_story:nth-of-type(6) {
+  background-image: url(images/men/man6.jpg);
+}
+.box_story:nth-of-type(7) {
+  background-image: url(images/men/man7.jpg);
+}
+.box_story:nth-of-type(8) {
+  background-image: url(images/men/man8.jpg);
+}
+.box_story:nth-of-type(9) {
+  background-image: url(images/men/man9.jpg);
+}
+.box_story:nth-of-type(10) {
+  background-image: url(images/men/man10.jpg);
+}
+.box_story:nth-of-type(11) {
+  background-image: url(images/men/man11.jpg);
+}
+.box_story:nth-of-type(12) {
+  background-image: url(images/men/man12.jpg);
+}
+.box_story:nth-of-type(13) {
+  background-image: url(images/men/man13.jpg);
+}
+.box_story:nth-of-type(14) {
+  background-image: url(images/men/man14.jpg);
+}
+.box_story:nth-of-type(15) {
+  background-image: url(images/men/man15.jpg);
+}
+.box_story:nth-of-type(16) {
+  background-image: url(images/men/man16.jpg);
+}
+.box_story:nth-of-type(17) {
+  background-image: url(images/men/man17.jpg);
+}
+.box_story:nth-of-type(18) {
+  background-image: url(images/men/man18.jpg);
+}
+.box_story:nth-of-type(19) {
+  background-image: url(images/men/man19.jpg);
+}
+.box_story:nth-of-type(20) {
+  background-image: url(images/men/man20.jpg);
+}
+.box_story:nth-of-type(21) {
+  background-image: url(images/men/man21.jpg);
+}
+.box_story:nth-of-type(22) {
+  background-image: url(images/men/man22.jpg);
+}
+.box_story:nth-of-type(23) {
+  background-image: url(images/men/man23.jpg);
+}
+.box_story:nth-of-type(24) {
+  background-image: url(images/men/man24.jpg);
+}
+
+/*============================================================================================================
  KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML 
  ============================================================================================================*/
 
@@ -631,3 +747,4 @@ input[type="text"]::placeholder {
 /*Støtte*/
 
 }
+
