@@ -1,3 +1,5 @@
+console.log('connected')
+
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('nav');
 const navLinksMobile = document.querySelectorAll('.nav-links-mobile li');
