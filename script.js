@@ -259,39 +259,41 @@ function myFunction15() {
 
 
 //Member section
-
 function validateForm() {
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
   var motivation = document.getElementById("motivation").value.trim();
- 
+
   // Validate name field
   if (name === "") {
-    alert("Angiv navn");
+    alert("Indtast venligst dit navn.");
     return false;
   }
 
   // Validate email field
   if (email === "") {
-    alert("Angiv korrekt email addresse");
+    alert("Indtast venligst din email-adresse.");
     return false;
   } else {
     var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email_regex.test(email)) {
-      alert("Angiv korrekt email addresse");
+      alert("Indtast venligst en gyldig email-adresse.");
       return false;
     }
- }
-
-   // Validate name field
-   if (motivation === "") {
-    alert("Angiv motivation");
-    return false;
   }
 
-
   // Submit the form if all validations pass
-  alert("Sign up successful!");
+  var xhr = new XMLHttpRequest();
+  var url = "send_email.php";
+  var params = "name=" + name + "&email=" + email + "&motivation=" + motivation;
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      alert(xhr.responseText);
+    }
+  }
+  xhr.send(params);
+
   return true;
 }
-

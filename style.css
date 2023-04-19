@@ -337,14 +337,15 @@ header {
   }
 
 
-.member_button:hover {
+.member_button:hover, .box_signup button:hover {
   background-color: green;
   transition: background-color 200ms;
   transition-timing-function: ease-in;
   transition-delay: 100ms;
 }
 
-.member_button:active {
+
+.member_button:active, .box_signup button:active  {
   background-color:greenyellow;
   transition: background-color 100ms, color 100ms;
   transition-timing-function: ease-in;
@@ -806,6 +807,9 @@ input[type="text"]::placeholder {
   cursor: pointer;
   align-self: center;
 }
+
+
+
 /*============================================================================================================
  ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE - ADJUST TO MOBILE 
  ============================================================================================================*/

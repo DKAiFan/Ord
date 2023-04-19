@@ -40,7 +40,7 @@
           <li><a href="retssikkerhed.html">Retssikkerhed</a></li>
           </ul>
       </nav>
-      <a href="medlem.html"><button class="member_button">Bliv medlem</button></a>
+      <a><p> </p></a>
  
     </header>
     <script src="script.js"></script>
@@ -67,24 +67,18 @@
 
             <p>Hvis du har spørgsmål, er du altid velkommen til at kontakte os inden tilmelding. Kontakt os her</p>
           </div>
-
           <div class="box_half">
             <div class="box_signup">
               <p>Udfyld navn og email for at blive medlem</p>
-            <form id="signupForm" onsubmit="return validateForm()">
-              <input type="text" placeholder="Indtast navn" id="name" name="name" required>
-              <input type="email" placeholder="E-Mail" id="email" name="email" required>
-              <input type="text" placeholder="Angiv motivation" id="motivation" name="motivation" required>
-              <button type="submit">Tilmeld mig</button>
-          </form>
-        </div>
-            
+              <form id="signupForm" onsubmit="return validateForm()" action="send_email.php">
+                <input type="text" placeholder="Indtast navn" id="name" name="name" required>
+                <input type="email" placeholder="E-Mail" id="email" name="email" required>
+                <input type="text" placeholder="Evt. bemærkninger" id="motivation" name="motivation">
+                <button type="submit">Tilmeld mig</button>
+              </form>
+            </div>
           </div>
-
-
-        </div>
-        
-        
+        </div>  
         
     </main>
     <footer>
@@ -99,5 +93,6 @@
         <a href="index.html">Tilbage til forside</a>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
