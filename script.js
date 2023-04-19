@@ -263,6 +263,7 @@ function validateForm() {
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
   var motivation = document.getElementById("motivation").value.trim();
+  console.log("validateForm() called");
 
   // Validate name field
   if (name === "") {
@@ -291,9 +292,10 @@ function validateForm() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       alert(xhr.responseText);
+      console.log(xhr.responseText);
     }
   }
   xhr.send(params);
 
-  return true;
+  return false;
 }
