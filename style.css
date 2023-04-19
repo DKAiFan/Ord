@@ -25,20 +25,27 @@ html {
     margin: 0 auto;
     position: relative;
     display:flex;
-    }
+    justify-content: center;
 
+    }
       .box_half {
         width: 50%;
-        display: block;
-        padding: 1rem;
+        display: flex;
+
+        justify-content: center;
      }
 
       .box_small {
         width:45%;
+        display: flex;
+        justify-content: center;
+
       }
 
       .box_large {
         width:55%;
+        display: flex;
+        justify-content: center;
       }
       
       .box_flex {
@@ -46,6 +53,7 @@ html {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+
  
       }
 
@@ -58,9 +66,18 @@ html {
       .box_text {
         align-items: center;
         line-height: 2rem;
-        text-align: justify;
-        padding: 2rem;
+        text-align: left;
+        padding: 2rem 0;
 
+        max-width: 600px;
+      }
+
+      .box_text_80{
+        align-items: center;
+        line-height: 2rem;
+        text-align: left;
+        width: 80%;
+        padding: 2rem 0;
       }
 
       .box_main {
@@ -69,6 +86,12 @@ html {
         padding: 2rem;
         justify-content: flex-end;
         display: flex;
+      }
+
+      .box_main_text {
+        width: 60%;
+        display: flex;
+        justify-content: center;
       }
 
       .box_info {
@@ -200,11 +223,9 @@ h2 {
     font-size: 25px;
     padding-bottom: 1rem;
     font-weight: 400;
-    
     text-align: start;
     color: #763434;
   }
-
 
   p {
     font-size: 18px;
@@ -216,12 +237,6 @@ h2 {
     text-decoration: none;
     color: black;
   }
-  
-
-
-
-
-
 
 /*============================================================================================================
  HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER 
@@ -357,12 +372,22 @@ display: flex;
 
 
 .headline_intro {
-  max-width: 250px;
-  text-align: right;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Aligns content vertically */
+  height: 300px; /* Set the height of the element */
+  text-align: center; /* Centers the text horizontally */
+
+}
+
+.headline_intro p {
   font-size: 80px;
   font-family: 'Playfair Display', serif;
   color: #fff;
 }
+
+
 /*============================================================================================================
  FORENING.HTML - FORENING.HTML - FORENING.HTML - FORENING.HTML - FORENING.HTML
  ============================================================================================================*/
@@ -524,6 +549,7 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
   background-image: url(images/men/man34.jpg);
 }
 
+#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more14  {display: none;}
 
 /*============================================================================================================
  KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML 
@@ -570,7 +596,7 @@ table td {
   width: calc(50% - 40px);
   padding: 20px;
   position: relative;
-  border: 1px solid black;
+  background-color: #e6e7eb;
   box-shadow: 5px 5px 10px lightgrey;
 }
 
@@ -599,11 +625,9 @@ table td {
   height: 40px;
   width: 40px;
   text-align: center;
-  line-height: 40px;
+  line-height: 2rem;
   border-radius: 50%;
-  background-image: url(logo/Artboard\ 1.svg);
-  font-size: 17px;
-  box-shadow: 0 0 0 4px #763434 inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+
 }
 .center-line .scroll-icon{
   bottom: 0px;
@@ -611,6 +635,7 @@ table td {
   font-size: 25px;
   transform: translateX(-50%);
 }
+
 .row-1 section .icon{
   top: 15px;
   right: -60px;
@@ -625,12 +650,15 @@ table td {
   align-items: center;
   justify-content: space-between;
 }
+
 .row section .details .title{
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 400;
+  color: #763434;
 }
 .row section p{
   margin: 10px 0 17px 0;
+  line-height: 2rem;
 }
 .row section .bottom a{
   text-decoration: none;
@@ -787,6 +815,10 @@ input[type="text"]::placeholder {
     display: none;
   }
   
+  .headline_intro p {
+font-size: 60px;
+  }
+
   .container {
     width: 100%;
     margin: 0;
@@ -794,15 +826,14 @@ input[type="text"]::placeholder {
     display:block;
   }
 
-  .box_half, .box_small, .box_large, .box_main, .box_text{
+  .box_half, .box_small, .box_large, .box_main, .box_text, .box_text_80, .box_main_text{
     width: 100%;
     text-align: center;
     padding: 0;
   }
 
-  .box_text {
+  .box_text, .box_text_80 {
     padding: 0.5rem;
-
     display: block;
     text-align: start;
     line-height: 2rem;
