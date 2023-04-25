@@ -900,9 +900,9 @@ font-size: 60px;
   
   nav {
     position: fixed;
-    top: 158px;
+    top: 75px;
     left: -100%;
-    width: 40%;
+    width: 50%;
     height: 100vh;
     background-color:white;
     z-index: 1;
