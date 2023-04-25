@@ -31,21 +31,22 @@ html {
       .box_half {
         width: 50%;
         display: flex;
-
         justify-content: center;
+
      }
 
       .box_small {
         width:45%;
         display: flex;
         justify-content: center;
-
+    
       }
 
       .box_large {
         width:55%;
         display: flex;
         justify-content: center;
+
       }
       
       .box_flex {
@@ -53,23 +54,29 @@ html {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
- 
       }
 
       .box_block {
         width: 100%;
         display: block;
-     
       }
       
       .box_text {
         align-items: center;
         line-height: 2rem;
         text-align: left;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
+        width: 600px;
 
+      }
+
+      .box_visitcard {
+        align-items: center;
+        line-height: 2rem;
+        text-align: left;
+        padding: 2rem 1rem;
         max-width: 600px;
+
       }
 
       .box_text_80{
@@ -78,20 +85,22 @@ html {
         text-align: left;
         width: 80%;
         padding: 2rem 0;
+
       }
 
       .box_main {
         background-color: #000e32;
         width: 40%;
-        padding: 2rem;
         justify-content: flex-end;
         display: flex;
+
       }
 
       .box_main_text {
         width: 60%;
         display: flex;
         justify-content: center;
+
       }
 
       .box_info {
@@ -107,7 +116,6 @@ html {
         justify-content: center;
         text-align: center;
         padding: 1rem;
-
       }
 
       .box_signup {
@@ -129,7 +137,7 @@ html {
     max-width: 1440px;
     display: flex;
     text-align: left;
-    padding: 6rem 0 2rem 3rem;
+    padding: 5rem 0 2rem 3rem;
     margin: 0 auto;
   }
 
@@ -155,7 +163,6 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
     justify-content: center;
     align-content: center;
     display: flex;
@@ -191,7 +198,6 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
- 
     width: 100%;
     height: 100%;
   }
@@ -201,7 +207,6 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     width: 100%;
     height: 100%;
   }
@@ -214,9 +219,9 @@ html {
 h2 {
     font-size: 32px;
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
     color: #000E32; 
     font-weight: 700;
+
   }
 
   h3 {
@@ -229,7 +234,6 @@ h2 {
 
   p {
     font-size: 18px;
-
   }
 
   a {
@@ -271,8 +275,10 @@ header {
 
   .header-text {
     text-align: left;
+    justify-items: center;
     margin-left: 1rem;
     font-family: 'Playfair Display', serif;
+    font-size: 14px;
     }
   
 /*HEADER NAVBAR*/
@@ -293,14 +299,15 @@ header {
    .header_center a:hover,
    .nav-links-mobile a:hover,
    .header_center a.active,
-   .nav-links-mobile a.active 
-   {
+   .nav-links-mobile a.active {
      color: #763434;
+     font-weight: bold;
    }
 
    .header_center a, .nav-links-mobile a {
     color: inherit;
-    transition: color 200ms;
+    font-weight: inherit;
+    transition: color 200ms ease-in;
     transition-timing-function: ease-in;
     transition-delay: 300ms;
    }
@@ -327,30 +334,31 @@ header {
   .member_button { 
     background-color: #763434;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
-    padding: 15px;
-    border: 1px solid #763434;;
-    min-width: 200px;
-    height: 53;
+    padding: 5px;
+    border: 1px solid #763434;
+    min-width: 150px;
     cursor: pointer;
   }
 
 
 .member_button:hover, .box_signup button:hover {
-  background-color: green;
+  background-color: #054D03;
   transition: background-color 200ms;
   transition-timing-function: ease-in;
   transition-delay: 100ms;
+  border: 1px solid #054D03;;
 }
 
 
 .member_button:active, .box_signup button:active  {
-  background-color:greenyellow;
+  background-color: green;
   transition: background-color 100ms, color 100ms;
   transition-timing-function: ease-in;
   transition-delay: 0;
-  color: black;
+  color: white;
+  border: 1px solid green;
 }
 
 /*Floating member button for index page*/
@@ -377,15 +385,15 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Aligns content vertically */
-  height: 300px; /* Set the height of the element */
+  height: 100%; /* Set the height of the element */
   text-align: center; /* Centers the text horizontally */
-
 }
 
 .headline_intro p {
   font-size: 80px;
   font-family: 'Playfair Display', serif;
   color: #fff;
+  line-height: 4rem;
 }
 
 
@@ -419,7 +427,7 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
   display: inline-block;
   width: 300px;
   height: 300px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   animation: moveBox 150s linear infinite;
   top: 0; /* new */
   right: -3500px; /* new */
@@ -428,12 +436,14 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
   background-repeat: no-repeat;
   text-align: center;
   padding-top: 7rem;
-
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: overlay;
 }
 
 .box_story p {
   margin: 0; /* remove default margin of paragraphs */
   max-width: 100%; /* ensure the text wraps within the container */
+
 }
 
 @keyframes moveBox {
@@ -447,6 +457,7 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
 
 .box_story:nth-of-type(1) {
   background-image: url(images/men/man1.jpg);
+
 
 }
 
@@ -550,7 +561,7 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
   background-image: url(images/men/man34.jpg);
 }
 
-#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more14  {display: none;}
+#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15  {display: none;}
 
 /*============================================================================================================
  KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML 
@@ -601,7 +612,29 @@ table td {
   box-shadow: 5px 5px 10px lightgrey;
 }
 
+.bottom button {
+  text-decoration: none;
+  background: #763434;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
 
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border: #763434;
+}
+
+.row a {
+  text-decoration: none;
+  color: #763434;
+  transition: all 0.3s ease;
+  font-size: 15px;
+ }
+
+.row a:hover {
+  text-decoration: underline;
+  color: grey;
+}
 
 .wrapper .row section::before{
   position: absolute;
@@ -628,6 +661,7 @@ table td {
   text-align: center;
   line-height: 2rem;
   border-radius: 50%;
+
 
 }
 .center-line .scroll-icon{
@@ -656,24 +690,19 @@ table td {
   font-size: 25px;
   font-weight: 400;
   color: #763434;
+  width: 85%;
 }
+
+.row section .details .date{
+width: 15%;
+text-align: right;
+}
+
 .row section p{
   margin: 10px 0 17px 0;
   line-height: 2rem;
 }
-.row section .bottom a{
-  text-decoration: none;
-  background: #763434;
-  color: #fff;
-  padding: 7px 15px;
-  border-radius: 5px;
-  /* font-size: 17px; */
-  font-weight: 400;
-  transition: all 0.3s ease;
-}
-.row section .bottom a:hover{
-  transform: scale(0.97);
-}
+
 
 
 
@@ -834,6 +863,7 @@ font-size: 60px;
     width: 100%;
     text-align: center;
     padding: 0;
+
   }
 
   .box_text, .box_text_80 {
