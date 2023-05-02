@@ -69,25 +69,31 @@
         
         <div class="box_half">
           <div class="box_signup">
-            <p>Udfyld navn og email for at blive medlem</p>
-            <h1>Sign Up Form</h1>
 
-            <form id="signup-form">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
+            <h1>Bliv medlem</h1>
+
+            <form action="https://formspree.io/f/meqwnabv" method="POST">
+
+              <P>Navn:</P>
+              <label for="name">Navn:</label>
+              <input type="text" id="name" name="name" required><br><br>
+              <P>Adresse:</P>
+              <label for="address">Addresse:</label>
+              <input type="text" id="address" name="address" required><br><br>
+              <P>Postnummer:</P>
+              <label for="postal-code">Postnummer:</label>
+              <input type="text" id="postal-code" name="postal-code" required><br><br>
+              <P>By:</P>
+              <label for="city">By:</label>
+              <input type="text" id="city" name="city" required><br><br>
+              <P>Email:</P>
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="address">Address:</label>
-              <input type="text" id="address" name="address" required>
-              <label for="city">City:</label>
-              <input type="text" id="city" name="city" required>
-              <label for="postal-code">Postal Code:</label>
-              <input type="text" id="postal-code" name="postal-code" required>
-              <input type="submit" value="Submit">
+              <input type="email" id="email" name="email" required><br><br>
+            
+              <button type="submit">Send</button>
             </form>
             
-            <div id="submit-message" style="display: none;">
-              Submit complete!
+          
             </div>
             </div>
           </div>
