@@ -26,7 +26,7 @@
       <nav>
         <ul class="header_center">
           <li><a href="forening.html">Foreningen</a></li>
-          <li><a href="samykkelov.html">Baggrund</a></li>
+          <li><a href="samykkelov.html">Samtykkeloven</a></li>
 
           <li><a href="retssikkerhed.html">Gode råd</a></li>
           <li><a href="support.html">Støt os</a></li>
@@ -35,7 +35,7 @@
         <ul class="nav-links-mobile">
           <li><a href="index.html">Forside</a></li>
           <li><a href="forening.html">Foreningen</a></li>
-          <li><a href="samykkelov.html">Baggrund</a></li>
+          <li><a href="samykkelov.html">Samtykkeloven</a></li>
 
           <li><a href="retssikkerhed.html">Gode råd</a></li>
           <li><a href="support.html">Støt os</a></li>
@@ -48,37 +48,47 @@
     </header>
     <script src="script.js"></script>
     <main>
-        <div class="headline_page">
-            <h2>Medlem</h2>
-        </div>
+      <div class="headline_page"><h2>Medlem</h2></div>
 
-        <div class="container lightgrey">
-          <div class="box_half box_text">
-            
-            <p>Medlemskab af Ord med ord koster 1000 DKK pr. person om året<br>
-              <br>
+      <div class="container lightgrey">
+        <div class="box_half">
+          <div class="box_text box_block">
+            <p>Medlemskab af Ord Mod Ord koster kun 86 kr./mdr om året. Dette vil blive opkrævet et år ad gangen.<br><br>
               Beløbet kan overføres til<br>
-              REG: XXXX<br>
-              Kontonummer: XXXXXXX<br> 
+              Reg: 9570<br>
+              Konto: 13614164 <br>
               <br>
               Eller via Mobilepay:<br>
-              XX XX XX XX<br>
+              XX XX XX XX<br><br>
+
+              Hvis du har spørgsmål, er du altid velkommen til at kontakte os inden tilmelding via. <a href="mailto:kontakt@ordmodord.dk"><p>kontakt@ordmodord.dk</p></a>
             </p>
-
-              <p>Andre praktiske informationer der er relevante. </p>
-               
-
-            <p>Hvis du har spørgsmål, er du altid velkommen til at kontakte os inden tilmelding. Kontakt os her</p>
+          
           </div>
-          <div class="box_half">
-            <div class="box_signup">
-              <p>Udfyld navn og email for at blive medlem</p>
-              <form id="signupForm" onsubmit="return validateForm()" action="send_email.php">
-                <input type="text" placeholder="Indtast navn" id="name" name="name" required>
-                <input type="email" placeholder="E-Mail" id="email" name="email" required>
-                <input type="text" placeholder="Evt. bemærkninger" id="motivation" name="motivation">
-                <button type="submit">Tilmeld mig</button>
-              </form>
+        </div>
+        
+        <div class="box_half">
+          <div class="box_signup">
+            <p>Udfyld navn og email for at blive medlem</p>
+            <h1>Sign Up Form</h1>
+
+            <form id="signup-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required>
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required>
+              <label for="postal-code">Postal Code:</label>
+              <input type="text" id="postal-code" name="postal-code" required>
+              <input type="submit" value="Submit">
+            </form>
+            
+            <div id="submit-message" style="display: none;">
+              Submit complete!
+            </div>
             </div>
           </div>
         </div>  

@@ -178,15 +178,21 @@ html {
 
   /*Billeder======================================================================================================*/
   .img_byret {
-    background-image: url(images/forside.webp);
     width:  1440px;
     height: 400px;
+    background-image: url(images/forside.JPG);
+    background-size: cover;
+    background-position: center calc(100% + 100px);
+    background-repeat: no-repeat;
   }
 
   .img_loven {
-    background-image: url(images/samtykkeloven.webp);
+    background-image: url(images/samtykkeloven.jpg);
     width:  1440px;
-    height: 600px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .box_image_byret {
@@ -200,7 +206,7 @@ html {
   }
 
   .box_img_support1 {
-    background-image: url(images/støtte1.webp);
+    background-image: url(images/støtte1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,7 +215,7 @@ html {
   }
 
   .box_img_support2 {
-    background-image: url(images/støtte2.webp);
+    background-image: url(images/støtte2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,6 +223,13 @@ html {
     height: 100%;
   }
 
+  .img_forening {
+    background-image: url(images/foreningen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  }
 
 
 
@@ -236,6 +249,10 @@ h2 {
     font-weight: 400;
     text-align: start;
     color: #763434;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 
   p {
@@ -306,8 +323,7 @@ header {
    .nav-links-mobile a:hover,
    .header_center a.active,
    .nav-links-mobile a.active {
-     color: #763434;
-     font-weight: bold;
+     color: gray;
    }
 
    .header_center a, .nav-links-mobile a {
@@ -408,13 +424,7 @@ display: flex;
  ============================================================================================================*/
 
 
-.box_forening {
-  background-image: url(images/foreningen.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-}
 /*============================================================================================================
 SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML   
  ============================================================================================================*/
@@ -427,17 +437,12 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
 
 #more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15  {display: none;}
 
-/*============================================================================================================
- KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML - KONTAKT.HTML 
- ============================================================================================================*/
 
-table {
-  margin-left: 6rem;
-}
 
-table td {
-  padding-right: 6rem;
-}
+
+
+
+
 
 /*TIMELINE - TIMELINE */
  .wrapper{
@@ -582,6 +587,17 @@ text-align: right;
 }
 
 
+/*============================================================================================================
+ MEDLEM.HTML
+ ============================================================================================================*/
+ label, input {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="submit"] {
+  margin-top: 20px;
+}
+
 
 
 
@@ -713,7 +729,7 @@ input[type="text"]::placeholder {
   }
   
   .headline_intro p {
-font-size: 60px;
+font-size: 40px;
   }
 
   .container {

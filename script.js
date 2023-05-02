@@ -258,11 +258,51 @@ function myFunction15() {
 
 
 
+// JavaScript code to handle form submission
+const form = document.getElementById('signup-form');
+const submitMessage = document.getElementById('submit-message');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => data[key] = value);
+  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      service_id: 'YOUR_EMAILJS_SERVICE_ID',
+      template_id: 'YOUR_EMAILJS_TEMPLATE_ID',
+      user_id: 'YOUR_EMAILJS_USER_ID',
+      template_params: data,
+    }),
+  });
+  if (response.ok) {
+    submitMessage.style.display = 'block';
+    form.reset();
+  } else {
+    alert('Error submitting form!');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 //Member section
 function validateForm() {
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
-  var motivation = document.getElementById("motivation").value.trim();
+  var adresse = document.getElementById("adresse").value.trim();
+  
   console.log("validateForm() called");
 
   // Validate name field
@@ -286,7 +326,7 @@ function validateForm() {
   // Submit the form if all validations pass
   var xhr = new XMLHttpRequest();
   var url = "send_email.php";
-  var params = "name=" + name + "&email=" + email + "&motivation=" + motivation;
+  var params = "name=" + name + "&email=" + email + "&adresse=" + motivation;
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function() {
