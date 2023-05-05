@@ -19,9 +19,117 @@ html {
 
 
   ::selection{
-    color: white;
-    background: #763434;
+  color: white;
+  background: #763434;
   }
+
+
+  /*Fonts and typogrfi ==========================================================================================================*/
+
+h2 {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #000E32; 
+  font-weight: 700;
+
+}
+
+h3 {
+  font-size: 25px;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  text-align: start;
+  color: #763434;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+/*============================================================================================================
+ Billeder - Billeder - Billeder -Billeder - Billeder - Billeder - Billeder - Billeder - Billeder - Billeder 
+============================================================================================================*/
+
+.img_byret {
+  width:  1440px;
+  height: 400px;
+  background-image: url(images/forsidebillede.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img_loven {
+  background-image: url(images/samtykkeloven.webp);
+  width:  1440px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img_support1 {
+  background-image: url(images/holdinghands.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.img_support2 {
+  background-image: url(images/openhands.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.img_forening {
+  background-image: url(images/foreningen.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.img_box {
+  width: 100%;
+  height: 500px;
+  background-image: url(images/forsidebillede.webp);
+  animation: change-image 60s infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+@keyframes change-image {
+  0% {
+    background-image: url(images/forsidebillede.webp);
+  }
+  33.33% {
+    background-image: url(images/test.png);
+  }
+  66.66% {
+    background-image: url(images/openhands.webp);
+  }
+  100% {
+    background-image: url(images/samtykkeloven.webp);
+  }
+}
+
 /*Boxes and containers======================================================================================================*/
   .container {
     max-width: 1440px;
@@ -29,129 +137,99 @@ html {
     position: relative;
     display:flex;
     justify-content: center;
-
     }
-      .box_half {
-        width: 50%;
-        display: flex;
-        justify-content: center;
 
-     }
+  .box_block {
+    width: 100%;
+    display: block;
+  }
 
-      .box_small {
-        width:45%;
-        display: flex;
-        justify-content: center;
-    
-      }
+  .box_faq {
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    padding: 1rem;
+    line-height: 2rem;
+  }
+  .box_flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-      .box_large {
-        width:55%;
-        display: flex;
-        justify-content: center;
+  .box_half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
 
-      }
-      
-      .box_flex {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
+  .box_info {
+    width: 440px;
+    height: 440px;
+    background-color: #763434;
+    color: white;
+    position: absolute; 
+    top: 10%; 
+    left: 10%; 
+    z-index: 2;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .box_large {
+    width:55%;
+    display: flex;
+    justify-content: center;
+  }
 
-      .box_block {
-        width: 100%;
-        display: block;
-      }
-      
-      .box_text {
-        align-items: left;
-        line-height: 2rem;
-        text-align: left;
-        padding: 2rem 1rem;
-        max-width: 600px;
+  .box_main {
+    background-color: #000e32;
+    width: 40%;
+    justify-content: flex-end;
+    display: flex;
+  }
 
-      }
+  .box_main_text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
 
+  .box_signup {
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    color: black;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
 
-      .box_visitcard {
-        align-items: center;
-        line-height: 2rem;
-        text-align: left;
-        padding: 2rem 1rem;
-        max-width: 600px;
+  .box_small {
+    width:45%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box_text {
+    align-items: left;
+    line-height: 2rem;
+    text-align: left;
+    padding: 2rem 1rem;
+    max-width: 600px;
+  }
 
-      }
-
-
-
-      .box_main {
-        background-color: #000e32;
-        width: 40%;
-        justify-content: flex-end;
-        display: flex;
-
-      }
-
-      .box_main_text {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-
-      }
-
-      .box_info {
-        width: 440px;
-        height: 440px;
-        background-color: #763434;
-        color: white;
-        position: absolute; 
-        top: 10%; 
-        left: 10%; 
-        z-index: 2;
-        display: block;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      .box_faq {
-        max-width: 600px;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        margin: 2rem auto;
-        padding: 1rem;
-        line-height: 2rem;
-      }
-
-      .box_signup {
-        width: 300px;
-        height: 250px;
-        background-color: white;
-        color: black;
-        display: block;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      .box_padding{
-        padding: 1rem;
-      }
 
   .headline_page {
     max-width: 1440px;
     display: flex;
     text-align: left;
     padding: 4rem 0 2rem 3rem;
-    margin: 0 auto;
-  }
-
-  .space_page {
-    max-width: 1440px;
-    display: flex;
-    text-align: left;
-    padding: 6rem 0 0 0;
     margin: 0 auto;
   }
 
@@ -162,107 +240,6 @@ html {
   .pink {
     background-color: #d9c6c6;
     width: 100%;
-  }
-  
-  .image_container {
-    max-width: 1440px; 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    z-index: 1;
-    position: relative;
-  }
-
-  /*Billeder======================================================================================================*/
-  .img_byret {
-    width:  1440px;
-    height: 400px;
-    background-image: url(images/forside.JPG);
-    background-size: cover;
-    background-position: center calc(100% + 100px);
-    background-repeat: no-repeat;
-  }
-
-  .img_loven {
-    background-image: url(images/samtykkeloven.jpg);
-    width:  1440px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .box_image_byret {
-    background-image: url(Image/byret.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  .box_img_support1 {
-    background-image: url(images/støtte1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-
-  .box_img_support2 {
-    background-image: url(images/støtte2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-
-  .img_forening {
-    background-image: url(images/foreningen.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-  }
-
-
-
-/*Fonts and typogrfi ==========================================================================================================*/
-
-h2 {
-    font-size: 32px;
-    font-family: 'Playfair Display', serif;
-    color: #000E32; 
-    font-weight: 700;
-
-  }
-
-  h3 {
-    font-size: 25px;
-    padding-bottom: 1rem;
-    font-weight: 400;
-    text-align: start;
-    color: #763434;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
-  a {
-    font-size: 18px;
-    text-decoration: none;
-    color: black;
   }
 
 /*============================================================================================================
@@ -397,9 +374,7 @@ header {
  INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX - INDEX 
 ============================================================================================================*/
 
-.introbox {
-display: flex;
-}
+
 
 
 .headline_intro {
@@ -435,7 +410,7 @@ SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMTYKKELOV.HTML - SAMT
 
 
 
-#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15  {display: none;}
+#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15, #more16  {display: none;}
 
 
 
@@ -721,7 +696,7 @@ input[type="text"]::placeholder {
  ============================================================================================================*/
 @media screen and (max-width: 1060px) {
   /*Global */
-  .header-text, .logo, .header_center, .footer_center, .space_page {
+  .header-text, .logo, .header_center, .footer_center {
     display: none;
   }
   
@@ -750,9 +725,6 @@ font-size: 40px;
     line-height: 2rem;
   }
 
-  .image_container {
-    width: 100%;
-  }
 
   .headline_page {
     padding: 1rem;
@@ -876,3 +848,46 @@ font-size: 40px;
 
 
 
+/*TEST*/
+
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box2 {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fade 5s ease-in-out infinite;
+}
+
+.box-text2 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

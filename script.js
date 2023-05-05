@@ -16,6 +16,35 @@ navLinksMobile.forEach(link => {
   });
 });
 
+// Medlem - reset
+function validateForm() {
+  const name = document.getElementById("name").value;
+  const postalCode = document.getElementById("postal-code").value;
+  const city = document.getElementById("city").value;
+  const email = document.getElementById("email").value;
+  const postalCodeRegex = /^\d{4}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name === "" || postalCode === "" || city === "" || email === "") {
+    alert("Alle felter skal udfyldes!");
+    return false;
+  }
+
+  if (!postalCodeRegex.test(postalCode)) {
+    alert("Postnummer skal være 4 tal!");
+    return false;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert("Email skal være gyldig!");
+    return false;
+  }
+}
+
+function resetForm() {
+  document.getElementById("myForm").reset();
+}
+
 //Timeline section
 function myFunction1() {
   var dots = document.getElementById("dots1");
@@ -256,86 +285,34 @@ function myFunction15() {
   }
 }
 
+function myFunction16() {
+  var dots = document.getElementById("dots16");
+  var moreText = document.getElementById("more16");
+  var btnText = document.getElementById("myBtn16");
 
-
-// JavaScript code to handle form submission
-const form = document.getElementById('signup-form');
-const submitMessage = document.getElementById('submit-message');
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const formData = new FormData(form);
-  const data = {};
-  formData.forEach((value, key) => data[key] = value);
-  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      service_id: 'YOUR_EMAILJS_SERVICE_ID',
-      template_id: 'YOUR_EMAILJS_TEMPLATE_ID',
-      user_id: 'YOUR_EMAILJS_USER_ID',
-      template_params: data,
-    }),
-  });
-  if (response.ok) {
-    submitMessage.style.display = 'block';
-    form.reset();
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Læs mere"; 
+    moreText.style.display = "none";
   } else {
-    alert('Error submitting form!');
+    dots.style.display = "none";
+    btnText.innerHTML = "Læs mindre"; 
+    moreText.style.display = "inline";
   }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-//Member section
-function validateForm() {
-  var name = document.getElementById("name").value.trim();
-  var email = document.getElementById("email").value.trim();
-  var adresse = document.getElementById("adresse").value.trim();
-  
-  console.log("validateForm() called");
-
-  // Validate name field
-  if (name === "") {
-    alert("Indtast venligst dit navn.");
-    return false;
-  }
-
-  // Validate email field
-  if (email === "") {
-    alert("Indtast venligst din email-adresse.");
-    return false;
-  } else {
-    var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email_regex.test(email)) {
-      alert("Indtast venligst en gyldig email-adresse.");
-      return false;
-    }
-  }
-
-  // Submit the form if all validations pass
-  var xhr = new XMLHttpRequest();
-  var url = "send_email.php";
-  var params = "name=" + name + "&email=" + email + "&adresse=" + motivation;
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      alert(xhr.responseText);
-      console.log(xhr.responseText);
-    }
-  }
-  xhr.send(params);
-
-  return false;
 }
+
+
+
+
+
+const images = ["images/foreningen.jpg", "uimages/foreningen.jpg", "images/foreningen.jpg", "images/foreningen.jpg", "url_to_image_5"];
+const texts = ["First set of text", "Second set of text", "Third set of text", "Fourth set of text", "Fifth set of text"];
+let index = 0;
+
+function changeContent() {
+  document.getElementById("text").textContent = texts[index];
+  document.getElementById("image").style.backgroundImage = `url(${images[index]})`;
+  index = (index + 1) % 5;
+}
+
+setInterval(changeContent, 30000);
