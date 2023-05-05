@@ -97,39 +97,55 @@ a {
 }
 
 .img_forening {
-  background-image: url(images/foreningen.webp);
+  background-image: url(images/ligeret.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  width: 100%;
+  height: 100%;
 }
 
 .img_box {
   width: 100%;
-  height: 500px;
-  background-image: url(images/forsidebillede.webp);
-  animation: change-image 60s infinite;
+  height: 575px;
+  background-image: url(images/Stories/story1.jpg);
+  animation: fade-image 30s infinite;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
-@keyframes change-image {
+@keyframes fade-image {
   0% {
-    background-image: url(images/forsidebillede.webp);
+
+    background-image: url(images/Stories/story1.jpg);
   }
-  33.33% {
-    background-image: url(images/test.png);
+  
+  16% {
+    background-image: url(images/Stories/story2.jpg);
   }
-  66.66% {
-    background-image: url(images/openhands.webp);
+  
+  32% {
+    background-image: url(images/Stories/story3.jpg);
   }
+  
+  48% {
+    background-image: url(images/Stories/story4.jpg);
+  }
+
+  64% {
+    background-image: url(images/Stories/story5.jpg);
+  }
+  
+  80% {
+    background-image: url(images/Stories/story6.jpg);
+  }
+  
+  
   100% {
-    background-image: url(images/samtykkeloven.webp);
+    background-image: url(images/Stories/story1.jpg);
   }
 }
-
 /*Boxes and containers======================================================================================================*/
   .container {
     max-width: 1440px;
@@ -137,7 +153,7 @@ a {
     position: relative;
     display:flex;
     justify-content: center;
-    }
+  }
 
   .box_block {
     width: 100%;
@@ -152,6 +168,7 @@ a {
     padding: 1rem;
     line-height: 2rem;
   }
+
   .box_flex {
     width: 100%;
     display: flex;
