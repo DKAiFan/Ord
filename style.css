@@ -26,7 +26,12 @@ html {
 
   /*Fonts and typogrfi ==========================================================================================================*/
 
-h2 {
+
+  h1 {
+    font-size: 20px;  
+  }
+  h2 {
+
   font-size: 32px;
   font-family: 'Playfair Display', serif;
   color: #000E32; 
