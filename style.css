@@ -30,13 +30,12 @@ html {
   h1 {
     font-size: 20px;  
   }
-  h2 {
 
+  h2 {
   font-size: 32px;
   font-family: 'Playfair Display', serif;
   color: #000E32; 
   font-weight: 700;
-
 }
 
 h3 {
@@ -113,39 +112,51 @@ a {
 .img_box {
   height: 720px;
   background-image: url(images/Stories/story1.jpg);
-  animation: fade-image 90s infinite;
+  animation: fade-image 90s steps(1) infinite;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 @keyframes fade-image {
   0% {
-
     background-image: url(images/Stories/story1.webp);
   }
   
-  16% {
+  10% {
     background-image: url(images/Stories/story2.webp);
   }
   
-  32% {
-    background-image: url(images/Stories/story7.jpg);
-  }
-  
-  48% {
-    background-image: url(images/Stories/story4.jpg);
-  }
-
-  64% {
+  20% {
     background-image: url(images/Stories/story3.jpg);
   }
   
-  80% {
+  30% {
+    background-image: url(images/Stories/story4.jpg);
+  }
+
+  40% {
+    background-image: url(images/Stories/story5.jpg);
+  }
+
+  50% {
     background-image: url(images/Stories/story6.jpg);
   }
   
+  
+  60% {
+    background-image: url(images/Stories/story7.jpg);
+  }
+  
+  70% {
+    background-image: url(images/Stories/story1.webp);
+  }
+  80% {
+    background-image: url(images/Stories/story2.webp);
+  }
+  90% {
+    background-image: url(images/Stories/story3.jpg);
+  }
   
   100% {
     background-image: url(images/Stories/story1.webp);
