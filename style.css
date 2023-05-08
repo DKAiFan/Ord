@@ -112,55 +112,66 @@ a {
 .img_box {
   height: 720px;
   background-image: url(images/Stories/story1.jpg);
-  animation: fade-image 90s steps(1) infinite;
-  background-size: cover;
+  animation: fade-image 120s infinite;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 @keyframes fade-image {
   0% {
-    background-image: url(images/Stories/story1.webp);
+    background-image: url(images/Stories/story1.jpg);
+  
   }
   
   10% {
-    background-image: url(images/Stories/story2.webp);
+    background-image: url(images/Stories/poster1.jpg);
+  
   }
+  
   
   20% {
-    background-image: url(images/Stories/story3.jpg);
-  }
+    background-image: url(images/Stories/story2.jpg);
   
-  30% {
-    background-image: url(images/Stories/story4.jpg);
   }
 
+  30% {
+    background-image: url(images/Stories/poster2.jpg);
+  
+  }
+  
+  
   40% {
-    background-image: url(images/Stories/story5.jpg);
+    background-image: url(images/Stories/story3.jpg);
+  
   }
 
   50% {
-    background-image: url(images/Stories/story6.jpg);
+    background-image: url(images/Stories/poster3.jpg);
+   
   }
-  
+
   
   60% {
-    background-image: url(images/Stories/story7.jpg);
+    background-image: url(images/Stories/story4.jpg);
   }
-  
+
   70% {
-    background-image: url(images/Stories/story1.webp);
+    background-image: url(images/Stories/poster4.jpg);
   }
+
   80% {
-    background-image: url(images/Stories/story2.webp);
+    background-image: url(images/Stories/story5.jpg);
   }
+
   90% {
-    background-image: url(images/Stories/story3.jpg);
+    background-image: url(images/Stories/poster5.jpg);
   }
-  
+
   100% {
-    background-image: url(images/Stories/story1.webp);
+    background-image: url(images/Stories/story1.jpg);
   }
+
 }
 /*Boxes and containers======================================================================================================*/
   .container {
