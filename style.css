@@ -120,60 +120,49 @@ a {
 }
 
 @keyframes fade-image {
-  0% {
+
+  0%, 9% {
     background-image: url(images/Stories/story1.jpg);
-  
   }
-  
-  10% {
+
+
+  10%, 19% {
     background-image: url(images/Stories/poster1.jpg);
-  
   }
-  
-  
-  20% {
+
+  20%, 29% {
+    background-image: url(images/Stories/poster1.jpg);
+  }
+
+  30%, 39% {
     background-image: url(images/Stories/story2.jpg);
-  
   }
 
-  30% {
+  40%, 49% {
+    background-image: url(images/Stories/story2.jpg);
+  }
+
+  50%, 59% {
     background-image: url(images/Stories/poster2.jpg);
-  
   }
-  
-  
-  40% {
+
+  60%, 69% {
+    background-image: url(images/Stories/poster2.jpg);
+  }
+
+  70%,79% {
     background-image: url(images/Stories/story3.jpg);
-  
   }
 
-  50% {
+  80%, 89% {
+    background-image: url(images/Stories/story3.jpg);
+  }
+
+  90%, 99% {
     background-image: url(images/Stories/poster3.jpg);
-   
   }
-
-  
-  60% {
-    background-image: url(images/Stories/story4.jpg);
-  }
-
-  70% {
-    background-image: url(images/Stories/poster4.jpg);
-  }
-
-  80% {
-    background-image: url(images/Stories/story5.jpg);
-  }
-
-  90% {
-    background-image: url(images/Stories/poster5.jpg);
-  }
-
-  100% {
-    background-image: url(images/Stories/story1.jpg);
-  }
-
 }
+
 /*Boxes and containers======================================================================================================*/
   .container {
     max-width: 1440px;
@@ -776,7 +765,7 @@ font-size: 40px;
     padding: 0;
   }
 
-  .box_half_image {
+  .box_half_image, .img_loven {
     width: 100%;
     height: auto;
     min-height: 300px;
